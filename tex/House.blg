@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/dev)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: House.aux
+The style file: siam.bst
+Database file #1: BibLib1.bib
+Database file #2: eqref.bib
+I was expecting a `,' or a `}'---line 403 of file eqref.bib
+ :  issn = {1903-1807}, pages = {56--60} 
+ :                                       url = {http://www.mscand.dk/article/view/11536}
+I'm skipping whatever remains of this entry
+You've used 3 entries,
+            2030 wiz_defined-function locations,
+            522 strings with 4078 characters,
+and the built_in function-call counts, 1101 in all, are:
+= -- 116
+> -- 27
+< -- 0
++ -- 11
+- -- 8
+* -- 70
+:= -- 159
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 63
+empty$ -- 81
+format.name$ -- 8
+if$ -- 251
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 12
+num.names$ -- 6
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 10
+quote$ -- 0
+skip$ -- 66
+stack$ -- 0
+substring$ -- 83
+swap$ -- 36
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 12
+width$ -- 4
+write$ -- 29
+(There was 1 error message)

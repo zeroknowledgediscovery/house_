@@ -1,0 +1,17 @@
+\def\WDT{3.5in} 
+\def\HGT{2.5in}
+
+\begin{tikzpicture}[font=\bf\sffamily\fontsize{14}{14}\selectfont]
+\node[] (A) at (0,0) {\includegraphics[width=\WDT]{Figures/s1d}};
+\node[anchor=west] (B) at (A.east) {\includegraphics[width=\WDT]{Figures/s2d}};
+
+\node [anchor=north west] at (A.north west) {A};
+\node [anchor=north west] at (B.north west) {B};
+
+\node[anchor=north west] (C) at (A.south west) {\includegraphics[width=\WDT]{Figures/s3d}};
+\node[anchor=west] (D) at ([yshift=-.0in,xshift=.0in]C.east) {\includegraphics[width=\WDT]{Figures/s4d}};
+\node [anchor=north west] at ([yshift=.1in]D.north west) {D};
+\node [anchor=north west] at ([yshift=.1in]C.north west) {C};
+
+\end{tikzpicture}
+ 

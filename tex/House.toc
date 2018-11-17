@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Preliminary Concepts}{1}{section.1}
+\contentsline {section}{\numberline {2}Conceptual Framework: The House Function $\Psi $}{2}{section.2}
+\contentsline {section}{\numberline {3}The Quasi-Metric $\Theta $}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Intuitive Properties Of the Quasi-metric}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}$\Theta $ Properties}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Computation of the House Function}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Recursive Computation}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Calculation of Statistical Significance}{4}{subsection.4.2}
+\contentsline {section}{\numberline {5}Inducing The Notion of Causal States}{5}{section.5}
+\contentsline {section}{References}{5}{section*.2}

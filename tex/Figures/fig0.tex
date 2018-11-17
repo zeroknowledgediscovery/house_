@@ -1,0 +1,102 @@
+%###################################
+\tikzset{
+    tape node/.style={
+        on chain,
+        draw=black,
+        inner sep=1pt,
+        outer xsep=0pt,
+        minimum height=0.2cm,
+        minimum width=0.2cm,
+        text depth=0pt,
+        font=\small\bf\sffamily,
+        inner sep=3pt
+    }
+}
+
+\newcommand*\myblackbox[1]{%
+    \node[
+        tape node, text=Red4
+    ] {#1};
+}
+
+\newcommand*\mygraybox[1]{%
+    \begin{pgfonlayer}{background}
+        \node[
+            tape node,
+            gray!90
+        ] {#1};
+    \end{pgfonlayer}
+}
+%AHHHCHHQHHH
+\DeclareRobustCommand*\drawboxes[1]{%
+\begin{tikzpicture}[
+        start chain=going right,
+        node distance=0pt
+    ]
+    \IfSubStr{#1}{R}{\myblackbox{R}}{\mygraybox{R}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{C}{\myblackbox{C}}{\mygraybox{C}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{Q}{\myblackbox{Q}~}{\mygraybox{Q}~}
+\end{tikzpicture}
+}
+%AHHHCHHQHHH
+\DeclareRobustCommand*\drawboxesB[1]{%
+\begin{tikzpicture}[
+        start chain=going right,
+        node distance=0pt
+    ]
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{C}{\myblackbox{C}}{\mygraybox{C}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{R}{\myblackbox{R}}{\mygraybox{R}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}}%
+    \IfSubStr{#1}{H}{\myblackbox{H}}{\mygraybox{H}~}
+\end{tikzpicture}
+}
+
+\begin{tikzpicture}[font=\bf\sffamily\fontsize{9}{9}\selectfont]
+  \node [] (A1) at (0,0) {
+    \begin{tikzpicture}
+      \path (160:1) coordinate (X);
+      \path ( 20:1) coordinate (Y);
+      \path ( 80:1) coordinate (Z);
+
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (.9,1.2);
+      \draw[opacity=.51,draw=none,fill=Green2!30] (A) circle (1.3);
+      \draw[opacity=.61,draw=none,fill=Green2!40] (A) circle (1.2);
+      \draw[opacity=.71,draw=none,fill=Green2!80] (A) circle (1.1);
+      \draw[opacity=.91,draw=none,fill=Green2!90] (A) circle (1);
+      \node[black, label={[]-90:$x$}] at (A)  {$\bullet$};
+
+      \draw [->,>=stealth', thick] (A.east) -- ([xshift=8]Y) node [midway,above] {$\epsilon$};
+      \draw[blue] (X) node [right] {$y \bullet$};
+
+      \draw[red] ([yshift=16]Z) node [below] {$\bullet z$};
+
+      \draw [->,>=stealth', thick,gray] ([xshift=-3,yshift=2]A.east) -- ([xshift=12]X) ;
+      \draw [->,>=stealth', thick,gray]  ([xshift=12]X) -- ([yshift=10,xshift=-4]Z) ;
+    \end{tikzpicture}};
+
+  \node [label={[]180:$x$}] (A2) at ([xshift=1.15in,yshift=.1in]A1.east) {\drawboxes{RCQ}};
+  \node [label={[]180:$z$}] (A3) at ([xshift=1.15in,yshift=-.3in]A1.east) {\drawboxesB{RCQ}};
+  \node [] (A4) at ([xshift=1.15in,yshift=.5in]A1.east) {R,C,Q: Disease phenotypes};
+  \node [] (A5) at ([xshift=1.15in,yshift=.3in]A1.east) {H: No report/Healthy};
+
+  \draw [->,>=stealth',ultra thick] ([xshift=-.5in]$(A2)!.5!(A3)$) -- ([xshift=.5in]$(A2)!.5!(A3)$) node [right,font=\bf\sffamily\fontsize{7}{7}\selectfont] {time};
+
+\node [anchor=north east,font=\bf\sffamily\fontsize{9}{9}\selectfont] (L1) at ([xshift=-.3in,yshift=-.5in]A.south west) {A.};
+\node [anchor=west,font=\bf\sffamily\fontsize{9}{9}\selectfont] at ([xshift=2in]L1.east) {B.};
+\end{tikzpicture}

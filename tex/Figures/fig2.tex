@@ -1,0 +1,41 @@
+\def\SCALE{.6}
+\begin{tikzpicture}[font=\bf\sffamily\fontsize{10}{10}\selectfont,scale=.7]
+\node [] (A1) {
+\begin{tikzpicture}[scale=\SCALE]
+  \draw [ultra thick,IndianRed2] (-2,2) to[out=0,in=135] (-1,1.5) to[out=-45,in=160] (0,0) to[out=0,in=135] (1.5,.5) to[out=-45,in=-135] (2.5,0)to[out=45,in=-180] (3.5,.5) ;
+  \def\x{-.3}
+  \draw [ultra thick,DodgerBlue4!80] (-2,-2) to[out=0,in=135] (-1,-1.55+\x) to[out=-45,in=160] (0,0.1+\x) to[out=0,in=135] (1.5,.57+\x) to[out=-45,in=-135] (2.45,0+\x)to[out=45,in=-180] (3.5,.4+\x) ;
+%
+\node [] at (-1.3,-1.3) {$h'_t$};
+\node [] at (-1.3,1.3) {$h_t$};
+\draw [thin, lightgray] (0,-2) -- (0,2) node [pos=0,below,text=black] {$t_1$};
+\draw [thin, lightgray] (1,-2) -- (1,2) node [pos=0,below,text=black] {$t_2$};
+\draw [thin, lightgray] (2,-2) -- (2,2) node [pos=0,below,text=black] {$t_3$};
+\draw [->,>=stealth',ultra thick, gray] (-3,-3) -- (3,-3) node [midway,below,text=black] {time};
+%
+\draw[fill=Green3,fill opacity=.25,  thick, , draw=black] (0,0) ellipse (.2 and .5);
+\draw[fill=gray,fill opacity=.25,  thick, , draw=black] (1,0.4) ellipse (.2 and .5);
+\draw[fill=gray,fill opacity=.25,  thick, , draw=black] (2,-.1) ellipse (.2 and .5);
+%
+\node [] at (-2.5,0) {\LARGE A};
+\end{tikzpicture}};
+\node [anchor=west] at (A1.east) {
+\begin{tikzpicture}[scale=\SCALE]
+  \draw [ultra thick,IndianRed2] (-2,2) to[out=0,in=135] (-1,1.5) to[out=-45,in=160] (0,0) to[out=0,in=135] (1.5,.95) to[out=-45,in=-135] (2.5,1.2)to[out=45,in=-180] (3.5,.75) ;
+  \def\x{-.3}
+  \draw [ultra thick,DodgerBlue4!80] (-2,-2) to[out=0,in=135] (-1,-1.55+\x) to[out=-45,in=160] (0,0.1+\x) to[out=0,in=135] (1.5,-.57+\x) to[out=-45,in=-135] (2.45,-1+\x)to[out=45,in=-180] (3.5,-1.4+\x) ;
+%
+\node [] at (-1.7,-1.3) {$h'_t$};
+\node [] at (-1.7,1.2) {$h_t$};
+\draw [thin, lightgray] (0,-2) -- (0,2) node [pos=0,below,text=black] {$t_1$};
+\draw [thin, lightgray] (1,-2) -- (1,2) node [pos=0,below,text=black] {$t_2$};
+\draw [thin, lightgray] (2,-2) -- (2,2) node [pos=0,below,text=black] {$t_3$};
+%
+\draw[fill=Green3,fill opacity=.25,  thick, , draw=black] (0,0) ellipse (.2 and .5);
+% \draw[fill=gray,fill opacity=.25,  thick, , draw=black] (1,0.4) ellipse (.2 and .5);
+% \draw[fill=gray,fill opacity=.25,  thick, , draw=black] (2,-.1) ellipse (.2 and .5);
+%
+\draw [->,>=stealth',ultra thick, gray] (-3,-3) -- (3,-3) node [midway,below,text=black] {time};
+\node [] at (-2.5,0) {\LARGE B};
+\end{tikzpicture}};
+\end{tikzpicture}
