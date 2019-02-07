@@ -52,7 +52,7 @@ Output options:
 ## Usage
 
 ```
-./bin/procdb -D dbdata/DX_age20.dat -P ./phnfiles/phnfile -T 1 -N 2 -I ed_^Xinfectious.dat -w INTEGRATED_OUTPUTS -z 1 -a 20
+./bin/procdb -D dbdata/DX_age20.dat -P ./phnfiles/phnfile -T 1 -N 2 -I ed_infectious.dat -w INTEGRATED_OUTPUTS -z 1 -a 20
 
 ```
 
