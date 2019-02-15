@@ -54,6 +54,8 @@ Output options:
 ```
 ./bin/procdb -D dbdata/DX_age20.dat -P ./phnfiles/phnfile -T 1 -N 2 -I ed_infectious.dat -w INTEGRATED_OUTPUTS -z 1 -a 20
 
+./bin/procdb -D dbdata/DX_tiny.dat -P ./phndir/Xphn_Infectious_Disease_icd.dat -T 1 -N 2 -I res.dat -w INTEGRATED_OUTPUTS1 -z 1 -a 5
+
 ```
 
 
