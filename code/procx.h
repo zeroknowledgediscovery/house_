@@ -26,6 +26,7 @@ extern const char* STRPIPE;
 extern const char* STRCOLON;
 extern const char* STRCARET;
 extern const string HEALTHY_;
+extern const char* STRCOMMA;
 
 /*! Print utility */
 ostream& operator << (ostream &out, vector <unsigned int> &s);\

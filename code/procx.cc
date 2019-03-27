@@ -1,5 +1,8 @@
 #include "procx.h"
 #define INDIVIDUAL_FILES 0
+#define DEBUG 0
+
+
 //static const char* STRCOMMA = ",";
 const char* STRPIPE = "|";
 const char* STRCOMMA=",";
@@ -215,7 +218,8 @@ _subject_::_subject_(string str,
   if(GO_)
     {
 
-      cout << id_ << " " << str << endl;
+      if(DEBUG)
+	cout << id_ << " " << str << endl;
       
       _id_=id_;
       _age0_=age_;
