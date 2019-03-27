@@ -14,7 +14,7 @@ LIBPATH= $(ZBASE)/lib
 DEPS = 
 INCLUDES = -I$(ZBASE)
 
-OBJ =  procdb extract_age_group
+OBJ =  procdb extract_age_group extract_by_id
 
 all:	 $(OBJ)  clear mvbin
 
@@ -33,6 +33,9 @@ procx.o: procx.cc
 
 %.o :	%.cc
 	$(CC) $(INCLUDES)  -c -o $@ $< $(CFLAGS)
+
+extract_by_id:	extract_by_id.o
+	$(CC)  $(CFLAGS) -o $@ $^   -L$(LIBPATH)  -ldictx_  $(LIBSO)  $(LIBS)  
 
 extract_age_group:	extract_age_group.o
 	$(CC)  $(CFLAGS) -o $@ $^   -L$(LIBPATH)  -ldictx_  $(LIBSO)  $(LIBS)  
